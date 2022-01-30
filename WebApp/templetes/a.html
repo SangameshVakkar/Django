@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO</title>
+</head>
+<body bgcolor="cyan">
+<form action="expression" method="post">
+    {% csrf_token %}
+    1st value :<input type="text"name ="text1">
+    2st value :<input type="text"name="text2">
+    <input type="submit">
+</form>
+<h1>
+    Hello {{titles}}
+</h1>
+<li><a href="{{link}}">Home</a></li>
+
+
+{% if user.is_authenticated %}
+<li><a href="app4/logout">Logout</a></li>
+{% else %}
+
+<li><a href="app2/signup">Sign Up</a></li>
+<li><a href="app3/login">Login</a></li>
+{% endif %}
+
+
+</body>
+</html>
